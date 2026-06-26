@@ -25,4 +25,4 @@ docker ps or kubectl get pods – Check container/pod status.
 docker logs <container> or kubectl logs <pod> – Inspect application logs.
 kubectl describe pod <pod> – Investigate events like CrashLoopBackOff, image pull failures, etc.
 
-Q2:
+
