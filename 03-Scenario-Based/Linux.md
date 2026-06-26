@@ -26,3 +26,16 @@ docker logs <container> or kubectl logs <pod> – Inspect application logs.
 kubectl describe pod <pod> – Investigate events like CrashLoopBackOff, image pull failures, etc.
 
 
+Q2:
+
+If someone asks:
+
+"Application is crashing. What command will you use?"
+
+A strong answer is:
+
+tail -f /var/log/app.log
+
+because you can watch new log entries in real time while reproducing the issue.
+
+
