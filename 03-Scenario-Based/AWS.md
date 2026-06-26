@@ -81,3 +81,48 @@ or on some distributions:
 sudo systemctl status sshd
 OS Firewall
 Check if ufw (Ubuntu) or firewalld/iptables is blocking port 22.
+
+Q2:
+
+You have created a VPC with:
+
+1 Public Subnet
+1 Private Subnet
+Internet Gateway attached
+NAT Gateway in the Public Subnet
+Interview Question
+
+Why can't an EC2 instance in the Private Subnet directly access the Internet through the Internet Gateway?
+
+And then explain:
+
+Why do we need a NAT Gateway?
+What is the traffic flow when a private EC2 downloads updates using apt update?
+
+ANS:
+Because:
+
+A private subnet does not have a route to the Internet Gateway (IGW).
+The EC2 instance also doesn't have a public IP or Elastic IP.
+An Internet Gateway only provides internet connectivity for instances that are publicly reachable (with appropriate routing and addressing).
+
+Why do we need a NAT Gateway?
+
+A NAT Gateway lets private EC2 instances initiate outbound connections to the internet (for things like apt update, downloading packages, contacting APIs).
+
+the traffic flows like this:
+
+Private EC2
+      │
+      ▼
+Private Route Table
+(0.0.0.0/0 → NAT Gateway)
+      │
+      ▼
+NAT Gateway (Public Subnet)
+      │
+      ▼
+Internet Gateway
+      │
+      ▼
+Internet
