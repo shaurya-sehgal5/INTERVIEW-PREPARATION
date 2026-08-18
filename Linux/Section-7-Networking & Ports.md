@@ -1,12 +1,5 @@
 # Networking & Ports — DevOps Interview Revision Guide
 
-> Practical Linux networking reference for **DevOps / Platform Engineer interviews**.  
-> Focused on commands, troubleshooting workflows, important files, and interview-ready answers.
-
-[![Linux](https://img.shields.io/badge/Linux-Networking-FCC624?logo=linux&logoColor=black)](#)
-[![DevOps](https://img.shields.io/badge/DevOps-Interview%20Prep-0A0A0A)](#)
-[![Level](https://img.shields.io/badge/Level-Fresher%20%2F%20Junior-blue)](#)
-
 ## What This README Covers
 
 - Ports, sockets, listening services, TCP vs UDP
